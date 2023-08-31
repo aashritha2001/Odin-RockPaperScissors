@@ -3,83 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let getComputerChoice = () => {
-            let randInt = Math.round(Math.random() * 2);
-            if(randInt == 0){
-                return 'ROCK';
-            }
-            else if(randInt == 1){
-                return 'PAPER';
-            }
-            else{
-                return 'SCISSORS';
-            }
-        }
+    
+    <section class="header">
+        🔥 ➡️ 💧 ➡️ 🌱 ➡️ 🔥
+    </section>
+    <section class="resultContainer">
+        <h1 id="result">Choose your Weapon</h1>
+        <p id="subresult">First to score 5 points wins the game</p>
+    </section>
+    <section class="selectContainer">
+        <div>
+            <div class="selection" id="player"><h1>❓</h1></div>
+            <h3 class="scores" id="playerScore">Player: 0 </h3>
+        </div>
+        <div>
+            <div class="selection" id="computer"><h1>❓</h1></div>
+            <h3 class="scores" id="computerScore">Computer: 0 </h3>
+        </div>
+    </section>
+    
+    <div id="player">
+        <button class="rpsBtn" id="fire">🔥</button>
+        <button class="rpsBtn" id="water">💧</button>
+        <button class="rpsBtn" id="nature">🌱</button>
+        
+    </div>
 
-        function playRound(playerSelection, computerSelection){
-            let player = playerSelection.toUpperCase();
-            console.log("Player: " + playerSelection );
-            console.log("Computer: " + computerSelection + "\n");
+    <div id="dialogue-box">
+        <p id="dialogue-text">Game Over! Would you like to play again?</p>
+        <button id="replay-button">Replay</button>
+    </div>
 
-            switch(true) {
-                case player == computerSelection:
-                    return "Tie!";
-                case player == 'ROCK' && computerSelection == 'PAPER':
-                    return "You lose! Paper beats Rock"; 
-                case player == 'ROCK' && computerSelection == 'SCISSORS':
-                    return "You won! Rock beats Scissors"; 
-                case player == 'PAPER' && computerSelection == 'ROCK':
-                    return "You won! Paper beats Rock";
-                case player == 'PAPER' && computerSelection == 'SCISSORS':
-                    return "You lose! Scissors beats Paper";  
-                case player == 'SCISSORS' && computerSelection == 'ROCK':
-                    return "You lose! Rock beats Scissors";
-                case player == 'SCISSORS' && computerSelection == 'PAPER':
-                    return "You won! Scissors beats Paper"; 
-                default:
-                    return "Tie !";
-
-            }
-        }
-
-        function game(){
-            let playerScore = 0;
-            let computerScore = 0;
-            for(let i = 0 ;i<5; i++){
-                let playerInput = prompt("Please enter: ", "Blah");
-                let result = playRound(playerInput, getComputerChoice());
-
-                while(result.includes('Tie')){
-                    let playerInput = prompt("Please enter: ", "Blah");
-                    result = playRound(playerInput, getComputerChoice()); 
-                }
-                if(result.includes('lose')){
-                    computerScore++;
-                }
-                else if(result.includes('won')){
-                    playerScore++;
-                }
-            }
-            console.log(declareWinner(playerScore, computerScore));
-        }
-
-        function declareWinner(playerScore, computerScore){
-            console.log("Player Score: " + playerScore + " Computer Score: " + computerScore);
-            if(playerScore > computerScore){
-                return "You Won!!";
-            }
-            return "You lose, better luck next time!";
-        }
-
-
-
-        game();
-
-
-    </script>
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          aashritha2001
+        </p>
+        <a href="https://github.com/aashritha2001" target="_blank">
+          <img src="./github-mark-white.png" alt="github image" id="git-logo">
+        </a>
+      </footer>
+   
+    <script src = 'app.js'></script>
 </body>
 </html>

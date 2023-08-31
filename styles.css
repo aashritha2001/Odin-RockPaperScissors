@@ -1,0 +1,145 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+
+.header {
+    height: 100px;
+    background-color: bisque;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+
+/* Round Result */
+.resultContainer {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#result {
+    font-size: 30px;
+}
+
+#subresult {
+    font-size: 25px;
+
+}
+
+/* Selection container shows the player and computer selection */
+.selectContainer {
+    padding-left: 14%;
+    padding-right: 14%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#player.selection {
+    width: 200px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#player {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-evenly;
+}
+
+.selectContainer h1 {
+    font-size: 100px;
+    background-color: white;
+}
+
+
+.selection {
+    background-color: white;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+/* Score displau */
+.scores {
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Fire, Water, Nature Buttons */
+.rpsBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 100px;
+    height: 130px;
+    width: 130px;
+    /*box-shadow: 0 2px 4px darkslategray;*/
+    border-radius: 50%;
+}
+
+
+/* Game over dialogue */
+#dialogue-box {
+    display: none;
+    text-align: center;
+    color: black;
+    background-color: #D2E7D6;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#dialogue-box p {
+    background-color: transparent;
+    color: black;
+}
+
+#dialogue-box button {
+    background-color: black;
+}
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    color: var(--primary-light);
+    font-size: 20px;
+}
+
+#git-logo{
+    width: 24px;
+    height: auto;
+}
+
